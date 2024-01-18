@@ -1,0 +1,16 @@
+to implement the relationship between various schemas by defining an
+association between them.
+
+Primary and Foreign key:
+
+Primary key is used to identify data uniquely therefore two rows can’t have the same primary key.
+It can’t be null. On the other hand, foreign key is used to maintain relationship between two tables.
+
+Types of associations :
+1. One-to-One
+2. One-to-Many
+3. Many-to-Manys
+
+Data Models:
+1. Reference Data Models (Normalisation)
+2. Embedded Data Models (Denormalisation)

@@ -1,0 +1,21 @@
+File system has how to create foldeer, file, rename the file or folder, update.
+
+The file system is a traditional way of storing data.
+A few advantages of using a traditional way of storing are as follows:
+1. Is universal
+2. No need to learn any new language
+3. Low maintenance cost
+
+Disadvantages:
+1. Lack of Security(Hacking may be easily happen)
+2. Data inconsistency
+3. Concurrent access not possible.
+
+
+In File system, data can be stored within the machine. And not easy to access other. But in DB, data is
+stored on online. Easily accessable.
+
+Interview question:
+Why we use DongoDB instead of using traditional file system?
+In File system, data can be stored within the machine. And not easy to access other. But in DB, data is
+stored on online. Easily accessable. 

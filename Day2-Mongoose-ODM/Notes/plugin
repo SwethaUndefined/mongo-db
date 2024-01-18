@@ -1,0 +1,4 @@
+plugin is also a helper method what this will do is, it will help the post hook.
+
+If we have 50 schema all that need post hook, it is really necessary to write the saame post hooks
+50 times, so that plugins are used. see the example in timerStampPlugin.js

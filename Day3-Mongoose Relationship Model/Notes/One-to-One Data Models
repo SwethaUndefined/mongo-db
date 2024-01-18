@@ -1,0 +1,56 @@
+One to One:
+
+Normalization:
+Normalisation means using reference data models. 
+
+In this model, an object A connects to the object B by reference to object B id or a
+unique identification field.
+
+// SchoolAdmission
+{
+ _id: "12345xyz",
+ enrollmentCode: "Sri130421"
+ child : ObjId(sri123)//Normalization
+}
+// Child
+{
+ _id: "sri123",
+ name: "Sristhi",
+ age: 4,
+ gender: “female"
+}
+
+In the above example, child id is inserted into schoolAdmission. This process is called Normalization or 
+referencing data model.
+
+
+Denormalisation:
+Here we embed data instead. Denormalisation makes a embeddeddata model.
+
+In 'Embedded' data model, instead of using a reference, object A contains the whole object B, or
+object B is embedded inside object A.
+
+// SchoolAdmission
+{
+ _id: "12345xyz",
+ enrollmentCode: "Sri130421",
+ child:
+ {
+ _id: "sri123",
+ name: "Sristhi",
+ age: 4,
+ gender: "female"
+ }
+}
+
+
+Here the child is entirely embedded with schoolAdmission called Denormalisation or embedded data model.
+
+
+
+One important, embedded always means redundancy(means duplicate).
+
+means, if I need the both the enrollment and child data. Before that if i store the child data inside
+the enrollment data, the data is duplicate right. Becauses the child data is already in seperate.
+Even why we are using embedded means, In big project, certain condition is having needs both
+enrollment and child data. That time go with embedded not worry about the redendancy.

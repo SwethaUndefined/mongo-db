@@ -1,0 +1,52 @@
+● Data is stored in the form of collections, and each collection stores information on several
+records
+● These collections act as tables in SQL, and the information in these tables is stored in the form
+of documents
+● Each record in the collection is stored as a document, and the information is recorded in the
+form of a key:value pair.
+
+
+MongoDB Commands - Create a Database:
+Type use then name====> use demo
+
+Next, check whether it is created or not.
+Type show dbs
+
+Next, show collections
+
+db.createCollection('users')
+
+Next, show collections
+--------------------------------------------------------------------------------------
+
+find({})--->is used to get all the data.
+findOne({})--->This will give the first object only.
+If i want any particular one use,
+
+find({lname:"Ragunathan"}), will give what collection is having last name as Ragunathan, that will give.
+But in that also i dont age, so i use projection.
+
+find({lname:"Ragunathan"},
+{projection: {age : 0}})
+
+---------------------------------------------------------------------
+If i want just fname, then use find({lname:"Ragunathan"},
+{projection: {fname : 1}})
+------------------------------------------------------------------------------
+If i have condition age > 26, then use 
+
+ db.collection("usersData").find(
+    {age : {$gte:27}}
+    ).toArray((err,response)=>{
+            if(err){
+                console.log("Failed to insert");
+            }
+            else{
+                console.log("Inserted successfully "+response);
+            }
+        }
+    
+
+
+
+    See all the methods in PPT.

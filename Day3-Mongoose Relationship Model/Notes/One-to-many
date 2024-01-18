@@ -1,0 +1,42 @@
+One-to-Many relationship is one of the most important modelling relationship that is used to design
+the backend applications.
+
+Eg: I posted one picture in instagram, but i got likes, comments and someother. Called one to Many
+
+
+There are two data models for this kind of relationship as well:
+○ Reference Data Models (Normalisation)
+○ Embedded Data Models (Denormalisation)
+
+There are three criteria to decide whether to choose referencing or embedding, with the
+objective to improve application performance
+○ Types of relationships 
+○ Data access pattern
+○ Data cohesion
+
+Consider that we are designing a tutorial blog data model. Some of the relationships that we can
+think of for a tutorial blog model are:
+○ A blog can have some images
+○ A blog can have multiple comments
+○ Multiple blogs based on single category
+
+• All the above mentioned examples have one-to-many relationship.
+-------------------------------------------------------------------------------------
+● One-to-Many relationships have three categories:
+
+○ One-to-Few //Think these with social media examples like instagram. 
+○ One-to-Many
+○ One-to-aLot
+
+● Depending on the types of relationships, data access patterns, or data cohesion, one can
+decide how to implement the data model, in other words, decide if we should denormalise or
+normalise the data.
+
+
+○ One-to-Few //Always use embedded
+○ One-to-Many// either use embedded or relational
+○ One-to-aLot //Always use relational
+
+
+Quick Tips:
+See the PPT

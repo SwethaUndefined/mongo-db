@@ -1,0 +1,30 @@
+Every database management system needs to perform a series of four essential operations.
+These operations are collectively referred to as CRUD operations, or Create, Read, Update
+and Delete operations. 
+
+They help us store, retrieve, update and remove records from any type of database system.
+
+1. Update the values using db.collection.update()
+2. Read the documents using db.collection.find()
+3. We can create a new document using the db.collection.insert()
+4. Delete a document using db.collection.remove().
+
+Delete:
+
+db.collection("usersData").deleteOne(
+        {fName: "Swetha"},
+        (err,response)=>{
+            if(err){
+                console.log("Failed to insert");
+            }
+            else{
+                console.log("Inserted successfully "+JSON.stringify(response));
+            }
+        }
+    )
+}
+);
+
+Delete the fname starts with "Swetha".
+
+also use deleteMany, for whose mark gte 65, will get delete. Must give second parameter.

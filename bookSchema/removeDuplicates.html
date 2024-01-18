@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+        var array = [1,2,3,1,2,4,5,7];
+var res = [1,2]
+var newArr = [];
+
+for(var i=0;i<array.length;i++){
+	for(var j=0;i<res.length;j++){
+	if(array[i]!=res[j]){
+		newArr.push(array[i])
+	}
+  }
+}
+
+console.log(newArr)
+document.getElementById("para").innerHTML = newArr;
+    </script>
+</body>
+</html>

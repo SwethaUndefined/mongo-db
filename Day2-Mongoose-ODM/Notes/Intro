@@ -1,0 +1,6 @@
+As a developer, we are not directly use mongoDB, we can go through mongoose. 
+Also known as ODM(Object Data Modelling). We can give grade for one object and not giving grade for 
+another object. Mongoose will take that not giving error.
+
+Mongoose is an ODM (Object Data Modeling) library for MongoDB.
+

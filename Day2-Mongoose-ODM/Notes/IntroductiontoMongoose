@@ -1,0 +1,76 @@
+Schemas:
+Everything in Mongoose starts with a Schema.
+
+Model:
+A model is a class with which we construct documents.
+
+First, need to create the scheme, that i have created in userSchema.js, there first install mongoose then
+create a schema. And then export it like,
+
+mongoose.model,
+
+That model will contain all the schema that i was created in userSchema.js file. Put the name
+as parameter ("name",schemaName).
+
+mongoose.model("User",userSchema). That name always be singular and must be starting with capital.
+
+Here just need to save() the collection no need to use insertOne insertMany and all.
+
+--v, version that mongoose keep track of version, not important for developer. Auto generated for mongoose to keep track lot of things internally.
+Somebody asks tell it is a version document.
+
+If we want to create our own object id instead of automatic creation, use moongose.schema.Types.ObjectId
+and it should be unique.
+
+The following schema types are permitted to store it in collection.
+● Array
+● Boolean
+● Buffer
+● Date
+● Mixed (A generic/flexible data type)
+● Number
+● ObjectId
+● String
+Mixed and ObjectId are defined under require(‘mongoose’).Schema.Types
+
+validate : (value)=>{
+return validator.isEmail(value);
+}
+
+         for validate, must install then use validate it will takes one fn then isEmail is for email validator.
+
+CRUD:
+
+1. .save() for insert
+2. .find({}) for Read. So go to index.js and see what i do. There we have use find() directly with the
+   schema variable not for the object variable.
+
+filter({}), we can use here also whatever we used in mongoDB and no need to convert to toString(), everything is done by mongoose.
+
+3. update, findOneAndUpdate(),
+   user //schemaImport.
+   .findOneAndUpdate({email:"ramyaragu407@gmail.com},
+   {email:"raguramya407@gmail.com"}
+   ) //.find({}), we can use here also whatever we used in mongoDB and no need to convert to toString()
+   .then((data) => {
+   console.log(data);
+   })
+
+
+First field is what has to be changes and the next is how it has to be changed. 
+
+the data is updated only in compass not showing it in terminal for this particular case. If we want to show it in our terminal also, we have to add one more query as {new : true}.
+
+user //schemaImport.
+   .findOneAndUpdate({email:"ramyaragu407@gmail.com},
+   {email:"raguramya407@gmail.com"},
+   {new : true}
+   )
+
+Also do, findManyAndUpdate.
+
+
+4. Delete:
+
+user //schemaImport.
+   .deleteMany({name:"Swetha"}

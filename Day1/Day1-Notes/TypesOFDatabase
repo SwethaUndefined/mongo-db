@@ -1,0 +1,25 @@
+1. Relational Databases
+2. Non-Relational Databases
+
+1. Relational Databases: 
+         1.  A relational database means a collection of data items stored in a tabular (table) format.
+         2.  These items are organised as sets of tables with rows and columns.
+
+Customer ID       FName        LName                 Address         
+C0001             Swetha       Ragunathan            Trichy
+C0001             Swetha       Ragunathan            Trichy
+
+The above example is for relational DB, which is in the form of rows and columns.
+
+
+2. Non-Relational Database:
+In a non-relational database, data is stored in an unstructured format. Normally used to store chungs of 
+data. Here we can dynamically store data.
+There is no relation between the tables in a non-relational database
+
+Advantages:
+1. Big data capability
+2. Fast performance
+
+The upper arrow in the dependency part ====>  '^4.10.0', means auto update. If the current version is
+beyond the older version, it will automatically update.

@@ -1,0 +1,16 @@
+Mongoose which is a
+MongoDB object modelling tool is designed to work in an asynchronous environment and thus,
+Mongoose supports both promises and callbacks.
+
+
+A promise is an object that may produce a single value some time in the future: either a resolved
+value, or a reason that it’s not resolved.
+
+A promise may be in one of 3 possible states:
+○ fulfilled
+○ rejected
+○ pending
+
+Every promise will go atleast 2 states. 
+First to pending
+Next to fulfilled or rejected as per condition.

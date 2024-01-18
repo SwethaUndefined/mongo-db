@@ -1,0 +1,56 @@
+Helper Methods for moongose:
+
+○ Instance methods
+○ Static methods
+○ Hooks (or middleware functions).
+
+1. Instance methods:
+The documents derived from their respective schemas can use these methods.
+
+Documents means fname: "SWetha" lname: "Ragunathan". And the schema means fname: String, lname: String.
+
+For example, with respect to the UserSchema we would create a instance method that will
+provide us with the initials name of the people.
+
+
+<!-- const schemaUser = new mongoose.Schema(
+    {
+        email:{
+         type : String,
+         required: true,
+        //  unique : true, not working for us
+         lowercase : true,
+         validate : (value)=>{
+            return validator.isEmail(value);
+         }
+        }
+    }
+);
+schemaUser.methods.getInitials = function(){
+    return this.fname + " " + this.lname;
+}
+module.exports = mongoose.model("userEmail",schemaUser); -->
+
+schemaUser.methods.getInitials = function(){
+    return this.fname + " " + this.lname;
+
+    The above line can be accessed the method getInitials in the handsOn1.js
+
+
+2. Static Methods:
+Same go to the handsOn.js and use static keyword.
+
+Static methods are accessed directly from the import varible(schemaImport) in handsOn1.js
+
+3. Hooks (or middleware functions):
+
+Middleware are functions that run at specific stages of a pipeline. 
+
+Eg: If the user put the password, that is not stored as plain text as whatever the user put, instead
+it is converted into encrypted format and then save. To convert it into encrypted format  pre and post functions are used(hooks).
+
+See the diagram in PPT page#45.
+
+See the example in schema.js and serverr.js in middleware folder.
+
+So far in compass the timing is not shown, when the collection is created and when it was updated and all. Lets do that in example.
